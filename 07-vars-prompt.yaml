@@ -1,0 +1,14 @@
+- name: take the input from prompt with variables
+  hosts: web
+  vars_prompt:
+  - name: COURSE
+    prompt: "Choose your course to learn"
+  - name: DURATION
+    prompt: "Enter you course duration"
+  - name: TRAINER
+    prompt: "Enter your Trainer name"
+  tasks:
+
+  - name: print the course information 
+    ansible.buildin.debug:
+      smg: "Hi... I am learning {{COURSE}}, duration is: {{DURATION}}, trainer: {{TRAINER}}"

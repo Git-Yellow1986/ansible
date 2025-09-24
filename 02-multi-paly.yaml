@@ -3,4 +3,5 @@
   tasks: 
   - name: 02-tasks
     ansible.builtin.debug:
+    msg: "This is tasks 02-multi-play.yaml"
 

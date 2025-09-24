@@ -5,8 +5,8 @@
   - name: my_number
     prompt: please enter the number
     private: false # not confidential
-    vars:
-      my_number: 139
+    # vars:
+    #   my_number: 139
   tasks:
   - name: print this if less than 10
     ansible.builtin.debug:
@@ -15,6 +15,6 @@
 
   - name: print this if greater than or equal to 10
     ansible.builtin.debug:
-    msg: "Given number {{my_number}} is less than 0"
+      msg: "Given number {{my_number}} is less than 0"
     when: my_number >= 10 # conditional expression
     

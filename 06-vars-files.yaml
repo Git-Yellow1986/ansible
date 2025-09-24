@@ -1,7 +1,7 @@
 - name: variable from files
   hosts: web
   vars_files:
-  - 07-vars.yml
+  - 07-vars.yaml
   tasks: 
 
   - name: print the course information

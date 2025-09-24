@@ -5,7 +5,7 @@
     TRAINER: "LL Prasad"
     DURATION: "120 Hrs"
   tasks:
-  -name: printing the variables
-  ansible.builtin.debug:
-    msg: "I'm leaning course: {{COURSE}}, trainer: {{TRAINER}}, Hourse:{{DURATION}}"
+  - name: printing the variables
+    ansible.builtin.debug:
+      msg: "I'm leaning course: {{COURSE}}, trainer: {{TRAINER}}, Hourse:{{DURATION}}"
 

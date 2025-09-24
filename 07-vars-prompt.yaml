@@ -3,6 +3,7 @@
   vars_prompt:
   - name: COURSE
     prompt: "Choose your course to learn"
+    private: false # not confidential
   - name: DURATION
     prompt: "Enter you course duration"
   - name: TRAINER

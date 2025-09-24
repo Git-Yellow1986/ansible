@@ -1,7 +1,7 @@
 - name: multiple printing
   hosts: web
   tasks: 
-  - name: 02-tasks
+  - name: multiple printing
     ansible.builtin.debug:
-    msg: "This is tasks 02-multi-play.yaml"
+      msg: "This is tasks 02-multi-play.yaml"
 

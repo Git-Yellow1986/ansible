@@ -1,0 +1,6 @@
+- name: multiple printing
+  hosts: web
+  tasks: 
+  - name: 02-tasks
+    ansible.builtin.debug:
+

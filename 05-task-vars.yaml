@@ -10,8 +10,8 @@
       msg: "I'm leaning course: {{COURSE}}, trainer: {{TRAINER}}, Hourse:{{DURATION}}"
 
   - name: printing the variables
-    vars: TASK LEVEL VARIABLES
-      COURSE: "ANSIBLE" # 
+    vars: #TASK LEVEL VARIABLES
+      COURSE: "ANSIBLE" # task level variables
     ansible.builtin.debug:
       msg: "I'm leaning course: {{COURSE}}, trainer: {{TRAINER}}, Hourse:{{DURATION}}"
   

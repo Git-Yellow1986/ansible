@@ -1,0 +1,10 @@
+# args from command prompt
+# -e 
+
+- name: variable from files
+  hosts: web
+  tasks: 
+
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "Hello {{NAME}}, Good: {{GREETING}}"

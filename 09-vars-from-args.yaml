@@ -1,5 +1,6 @@
 # args from command prompt
-# -e 
+#  ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 09-vars-from-args.yaml -e "NAME=Matthews GREETING=Morning"
+
 
 - name: variable from files
   hosts: web

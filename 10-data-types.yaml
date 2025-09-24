@@ -1,0 +1,27 @@
+- name: DevOps Course information
+  hosts: local
+  connection: local # for localhosts
+  vars: 
+    course: "DevOps with AWS" # It is String Data type
+    duration: 120 # int/float/numher
+    topics: # list
+    - Linux
+    - Shell
+    - ansible
+    - terraform
+    - AWS
+    - k8
+    live: true # boolean
+    tools: # map/dictionary/key value pairs , it is called key value pairs
+      ci: jenkins # These are keys jenkins,ansible,aws
+      cm: ansible
+      cloud: AWS
+      aws: # list and key value pair / here aws is key , values are IAM and S3
+      - IAM
+      - S3
+
+  tasks:
+  - name: print the course information  
+    ansible.builtin.debugs:
+      msg: "Hi.. I am learning {{course}}, duration:{{duration}}, topics are: {{topics}}, and live: {{live}}, tasks: {{tasks}}, tools: {{tools}}"
+

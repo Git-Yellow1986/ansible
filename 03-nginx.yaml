@@ -1,7 +1,7 @@
 - name: install nginx and run
   hosts: web
+  become: yes
   tasks: 
-  become:
   - name: install nginx
     ansible.builtin.package: #heterogenuos module that can run for all distri
       name: nginx

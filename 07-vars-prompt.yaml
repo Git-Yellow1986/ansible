@@ -10,5 +10,5 @@
   tasks:
 
   - name: print the course information 
-    ansible.buildin.debug:
+    ansible.builtin.debug:
       smg: "Hi... I am learning {{COURSE}}, duration is: {{DURATION}}, trainer: {{TRAINER}}"

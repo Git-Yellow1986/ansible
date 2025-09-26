@@ -4,4 +4,18 @@
   tasks:
   - name: print the default variables
     ansible.builtin.debug:
+      # if forgot course variable it will print Ansible defaultly 
+
      msg: "Hello {{ course | default ('Ansible') }}"
+
+  - name: convert to  upper case
+    vars:
+      greeting: "Hello Ramesh"
+    ansible.builtin.debug:
+      msg: "{{ greeting | upper }}"
+
+  - name: convert to  upper case
+    vars:
+      goodmoring: "Hello Ramesh"
+    ansible.builtin.debug:
+      msg: "{{ goodmorning | upper }}"

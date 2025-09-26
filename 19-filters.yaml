@@ -44,8 +44,8 @@
   - name: convert to list to map
     vars:
       course:
-      - matthews
-      - Hyderabad
-      - 800089
+      - { "key": "name", "value": "matthews" }
+      - { "key": "place", "value": "Hyderabad" }
+      - { "key": "pincode", "value": "800089" }
     ansible.builtin.debug:
       msg: "{{ course | item2dict }}"  

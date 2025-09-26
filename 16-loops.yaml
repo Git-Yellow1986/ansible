@@ -1,0 +1,15 @@
+- name: loop demo
+  hosts: local
+  connection: local
+  tasks:
+
+  - name: display lis of name give bellow
+    ansible.builtin.debug:
+     msg: "Hi...Hello {{ item }}"
+    loop:
+    - Ramesh
+    - Suresh
+    - Lishanth
+    - Vineesha
+    - Yamuna
+    

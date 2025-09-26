@@ -48,4 +48,4 @@
       - Hyderabad
       - 800089
     ansible.builtin.debug:
-      msg: "{{course | listdict2 }}"  
+      msg: "{{ course | item2dict }}"  

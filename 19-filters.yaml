@@ -19,3 +19,9 @@
       goodmorning: "Hello Ramesh"
     ansible.builtin.debug:
       msg: "{{ goodmorning | upper }}"
+
+  - name: unique numbers
+    vars:
+      numbers: [1,2,3,5,3,6,1,8,8]
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"

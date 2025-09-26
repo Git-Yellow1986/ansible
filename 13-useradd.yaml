@@ -1,3 +1,5 @@
+# Note: rc 1 is return code, exit status
+
 - name: check the user is or not other wise create user
   hosts: local
   connection: local
@@ -12,4 +14,8 @@
   - name: print the user information
     ansible.builtin.debug:
       msg: "user info: {{ USER }}"
+
+  - name: add user expense
+    ansible.builtin.command: useradd expense
+    when: USER.rc !=0
 

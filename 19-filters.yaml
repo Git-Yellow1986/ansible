@@ -31,3 +31,21 @@
       number: [1,2,3,5,3,6,1,8,8]  
     ansible.builtin.debug:
       msg: "Min {{ number | min }}, Max {{ number | max }}"
+
+  - name: convert map to Lishanth
+    vars:
+      course:
+       name: "matthews"
+       place: "Hyderabad"
+       pincode: "500089"
+    ansible.builtin.debug:
+      msg: "{{ cours | dict2items }}"
+
+  - name: convert to list to map
+    vars:
+      course:
+      - matthews
+      - Hyderabad
+      - 800089
+    ansible.builtin.debug:
+      msg: "{{course | listdict2 }}"  

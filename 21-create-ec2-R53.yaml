@@ -14,7 +14,7 @@
     amazon.aws.ec2_instance:
       name: "{{ item }}"
       subnet: "{{ subnet_id }}"
-      instant_type: "{{ t3.micro }}"
+      instant_type: "{{ t2.micro }}"
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
     loop: "{{ instances }}"

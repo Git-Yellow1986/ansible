@@ -36,13 +36,13 @@
   - name: convert to map to list
     vars:
       course:
-      - name: "matthews:"
-      - place: "Hyderabad"
-      - pincode: 500089
+        name: "matthews:"
+        place: "Hyderabad"
+        pincode: 500089
     ansible.builtin.debug:
       msg: "{{ course | dict2items }}"  
 
-  - name: convert to list to map
+  - name: convert to map to list
     vars:
       course:
       - { "key": "name", "value": "matthews" }

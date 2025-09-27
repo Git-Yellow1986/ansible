@@ -50,7 +50,7 @@
       value: "{{ item.instances[0].public_ip_address }}"
       wait: true
       overwrite: true 
-    loop: "{{ec2_instances.results }}"
+    loop: "{{ ec2_instances.results }}"
     when: item.item == "frontend"
   # Make sure that dependencies installed or not or else install it
   # pip3.9 install boto3 botocor

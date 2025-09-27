@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    subnet_id: "subnet-0bc41aa50c0fccefc"
+    subnet_id: subnet-0bc41aa50c0fccefc
     sg_id: "sg-0b9fd6aabf64f5c40"
     ami_id: "ami-09c813fb71547fc4f"
     instances:
@@ -18,7 +18,7 @@
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
     loop: "{{ instances }}"
-    register: ec2-instance
+    register: ec2-instances
 
   # Make sure that dependencies installed or not or else install it
   # pip3.9 install boto3 botocor

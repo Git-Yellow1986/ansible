@@ -49,4 +49,4 @@
       - { "key": "place", "value": "Hyderabad" }
       - { "key": "pincode", "value": 800089 }
     ansible.builtin.debug:
-      msg: "{{ course | dict2items }}"  
+      msg: "{{ course | items2dict }}"  

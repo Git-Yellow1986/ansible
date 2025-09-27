@@ -13,12 +13,12 @@
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
-      subnet: "{{ subnet_id }}"
-      instant_type: "{{ t2.micro }}"
+      vpc_subnet_id: "{{ subnet_id }}"
+      instance_type: "{{ t2.micro }}"
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
     loop: "{{ instances }}"
-    register: ec2_instance
+    register: ec2_instances
 
   # Make sure that dependencies installed or not or else install it
   # pip3.9 install boto3 botocor

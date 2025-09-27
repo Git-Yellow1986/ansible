@@ -41,11 +41,11 @@
   #   ansible.builtin.debug:
   #     msg: "{{ cours | dict2items }}"
 
-  # - name: convert to list to map
-  #   vars:
-  #     course:
-  #     - { "key": "name", "value": "matthews" }
-  #     - { "key": "place", "value": "Hyderabad" }
-  #     - { "key": "pincode", "value": 800089 }
-  #   ansible.builtin.debug:
-  #     msg: "{{ course | items2dict }}"  
+  - name: convert to list to map
+    vars:
+      course:
+      - { "key": "name", "value": "matthews" }
+      - { "key": "place", "value": "Hyderabad" }
+      - { "key": "pincode", "value": 800089 }
+    ansible.builtin.debug:
+      msg: "{{ course | items2dict }}"  

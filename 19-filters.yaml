@@ -37,7 +37,7 @@
     vars:
       course:
         name: "matthews:"
-        place: "Hyderabad"
+        place: "Hyderabad" 
         pincode: 500089
     ansible.builtin.debug:
       msg: "{{ course | dict2items }}"  

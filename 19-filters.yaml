@@ -32,20 +32,12 @@
     ansible.builtin.debug:
       msg: "Min {{ number | min }}, Max {{ number | max }}"
 
-  # - name: convert map to list
-  #   vars:
-  #     course:
-  #       name: "matthews"
-  #       place: "Hyderabad"
-  #       pincode: "500089"
-  #   ansible.builtin.debug:
-  #     msg: "{{ cours | dict2items }}"
-
+  
   - name: convert to map to list
     vars:
       course:
-      - name: matthews
-      - place: Hyderabad
+      - name: "matthews:"
+      - place: "Hyderabad"
       - pincode: 500089
     ansible.builtin.debug:
       msg: "{{ course | dict2items }}"  

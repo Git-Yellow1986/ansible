@@ -41,6 +41,15 @@
   #   ansible.builtin.debug:
   #     msg: "{{ cours | dict2items }}"
 
+  - name: convert to map to list
+    vars:
+      course:
+      - name: matthews
+      - place: Hyderabad
+      - pincode: 500089
+    ansible.builtin.debug:
+      msg: "{{ course | dict2items }}"  
+
   - name: convert to list to map
     vars:
       course:

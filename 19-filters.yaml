@@ -32,7 +32,7 @@
     ansible.builtin.debug:
       msg: "Min {{ number | min }}, Max {{ number | max }}"
 
-  - name: convert map to Lishanth
+  - name: 
     vars:
       course:
        name: "matthews"
@@ -46,6 +46,6 @@
       course:
       - { "key": "name", "value": "matthews" }
       - { "key": "place", "value": "Hyderabad" }
-      - { "key": "pincode", "value": "800089" }
+      - { "key": "pincode", "value": 800089 }
     ansible.builtin.debug:
       msg: "{{ course | items2dict }}"  

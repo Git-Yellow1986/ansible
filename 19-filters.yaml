@@ -40,7 +40,7 @@
       - place: "Hyderabad"
       - pincode: 500089
     ansible.builtin.debug:
-      msg: "{{ course | dict2items }}"  
+      msg: "{{ course | items2dict }}"  
 
   - name: convert to list to map
     vars:

@@ -36,5 +36,6 @@
     value: "{{ item.instances[0].private_ip_address }}"
     wait: true
     overwrite: true 
+    loop: "{{ec2_instances.results }}"
   # Make sure that dependencies installed or not or else install it
   # pip3.9 install boto3 botocor

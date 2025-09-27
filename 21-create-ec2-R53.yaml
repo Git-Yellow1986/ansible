@@ -28,14 +28,14 @@
 
   - name: create aws r53
     amazon.aws.route53:
-    state: present
-    zone: "{{ zone }}"
-    record: "{{ item.item }}.{{ zone }}" # mysql.learnaws.space
-    type: A
-    ttl: 1
-    value: "{{ item.instances[0].private_ip_address }}"
-    wait: true
-    overwrite: true 
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ item.item }}.{{ zone }}" # mysql.learnaws.space
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}"
+      wait: true
+      overwrite: true 
     loop: "{{ec2_instances.results }}"
   # Make sure that dependencies installed or not or else install it
   # pip3.9 install boto3 botocor
